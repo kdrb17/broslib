@@ -8,7 +8,7 @@ rvar2 = (rvar1, )
 cur.execute("SELECT booknum, room, bcase, shelf, position, title, author FROM books WHERE booknum =?",  (rvar2))
 records = cur.fetchall()
 print("Total current books are:  ", len(records))
-print("Printing each row")
+print("Printing each book")
 for row in records:
     var1 = row[0]
     print(var1)
@@ -31,8 +31,8 @@ cur.executemany("INSERT INTO readings VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", boo
 con.commit()
 cur.execute("SELECT day, date, booknum, room, bcase, shelf, position, title, author, notes FROM readings")
 records = cur.fetchall()
-print("Total current books are:  ", len(records))
-print("Printing each row")
+print("Total current readings are:  ", len(records))
+print("Printing each reading")
 for row in records:
     print(row[0])
     print(row[1])
