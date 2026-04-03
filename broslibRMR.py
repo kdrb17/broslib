@@ -1,3 +1,4 @@
+#fethiye code
 import sqlite3 
 import random
 import datetime as dt
